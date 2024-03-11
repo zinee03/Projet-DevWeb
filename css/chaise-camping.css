@@ -1,0 +1,581 @@
+/* Content from chaise-ergo.css */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Pour que le contenu occupe au moins toute la hauteur de la fenêtre */
+    font-family: 'MontSerrat', sans-serif; /* Utilisation de la police de caractères Roboto */
+    font-size: 16px; /* Taille de la police de caractères par défaut */
+    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+}
+
+.container {
+    display: flex;
+    flex-grow: 1; /* Pour que le contenu s'étende et prenne tout l'espace restant */
+}
+
+.menu {
+    width: 200px; /* Largeur du menu */
+    background-color: #f4f4f4; /* Couleur de fond du menu */
+    padding: 20px; /* Espacement intérieur du menu */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour le menu */
+}
+
+/* Style des liens du menu */
+.menu a {
+    display: block; /* Affiche les liens en tant que bloc pour qu'ils prennent toute la largeur du menu */
+    text-decoration: none; /* Supprime la soulignement des liens */
+    color: #333; /* Couleur du texte des liens */
+    margin-bottom: 10px; /* Espacement entre les liens */
+    font-weight: bold; /* Police en gras pour les liens */
+}
+
+.content {
+    flex-grow: 1; /* Pour que le contenu s'étende et prenne tout l'espace restant */
+    padding: 20px; /* Espacement intérieur du contenu */
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none; /* Supprime les puces par défaut */
+    padding: 0;
+}
+
+.article {
+    display: flex; /* Utilisation de flexbox */
+    flex-direction: column; /* Alignement vertical des éléments à l'intérieur de chaque article */
+    align-items: center; /* Centrage horizontal des éléments à l'intérieur de chaque article */
+    width: calc(33.33% - 20px); /* Ajustement de la largeur pour avoir 3 articles par ligne */
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box; /* Inclure le padding dans le calcul de la largeur */
+    flex-grow: 1; /* Permettre aux éléments d'occuper l'espace disponible sur la ligne */
+}
+
+.article img {
+    max-width: 100%;
+    max-height: 200px; /* Ajustement de la hauteur des images */
+    margin-bottom: 10px; /* Ajout de marge en bas pour l'espace entre l'image et le prix */
+}
+
+.prix {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0; /* Suppression de la marge autour du prix */
+}
+
+label {
+    font-size: 14px; /* Ajustement de la taille de la description */
+    font-weight: bold; /* Police en gras pour la description */
+}
+
+.content ul {
+    display: flex; /* Utilisation de flexbox pour aligner horizontalement les articles */
+    flex-wrap: wrap; /* Permettre le retour à la ligne si nécessaire */
+    justify-content: space-around; /* Centrer les éléments horizontalement avec un espace équilibré */
+}
+
+header {
+    background: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+nav #logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+h1, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat', sans-serif; /* Changé en Montserrat */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #f8f9fa;
+    box-shadow: 2px 0 5px rgba(0,0,0,.3);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    }
+    
+    /* Style pour le menu déroulant affiché */
+    .sidebar.show {
+    transform: translateX(0);
+    }
+    
+    /* Style pour la table et les boutons dans la sidebar */
+    .summary-table {
+    width: 100%;
+    }
+    
+    .summary-table button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+    text-align: left;
+    transition: background-color 0.3s ease;
+    }
+    
+    .summary-table button:hover {
+    background-color: #eee;
+    }
+    #menuIcon {
+        margin-right: 20px; /* Ajustez selon vos besoins pour décaler le menu déroulant vers la droite */
+        display: flex;
+        align-items: center;
+    }
+    
+    nav #logo {
+        flex-grow: 1; /* Cela permettra au logo de pousser les éléments de navigation vers la droite */
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: flex-end; /* Cela alignera les liens de navigation à droite */
+        gap: 1rem; /* Cela mettra un espace entre les liens de navigation */
+        margin: 0; /* Assurez-vous qu'il n'y a pas de marge externe qui décale les liens */
+    }
+    
+    nav ul li a {
+        padding: .5rem 1rem;
+    }
+    
+    #toggleSummaryButton {
+        max-width: 40px; /* Définissez la largeur maximale de l'image */
+        height: auto; /* Permet de conserver les proportions de l'image */
+    }
+    
+    #sidebar {
+        z-index: 1; /* Assurez-vous que le menu déroulant est sous le contenu principal */
+    }
+      
+    
+    .sidebar-button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-family: 'Montserrat', sans-serif; /* Utilisation de la même police */
+        font-size: 1.2rem; /* Taille de police agrandie */
+    }
+    
+    .sidebar-button:hover {
+        background-color: #eee;
+    }
+    
+    #pageWrapper {
+        transition: transform 0.3s ease;
+    }
+    
+    .sidebar.show + #pageWrapper {
+        transform: translateX(250px); /* Ajustez la valeur selon la largeur de votre sidebar */
+    }
+      
+    /* Style pour le menu latéral */
+    .side-nav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #e9ebf0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    
+    /* Style pour le contenu principal décalé */
+    .main-content {
+        transition: margin-left .5s;
+        padding: 16px;
+    }
+    
+    /* Ajouté quand le menu est ouvert pour décaler le contenu principal */
+    .main-content.move-right {
+        margin-left: 250px;
+    }
+    
+    #toggleMenuButton {
+        width: 40px;
+        height: 40px;
+    }
+    
+
+/* Content from index.css */
+body, h1, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat', sans-serif; /* Changed to Montserrat */
+}
+
+/* Basic styling */
+body {
+    line-height: 1.6;
+    background-color: #f8f9fa;
+}
+
+header {
+    background: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Cela alignera le logo et les liens de navigation sur des côtés opposés */
+    padding: 0 2rem; /* Ajustez les valeurs de padding selon vos besoins */
+}
+
+nav #logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+
+#hero {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: url('your-image-path.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #999999;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #999999;
+    border: 1px solid #999999;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    background-color: #999999;
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem 0;
+    background: #000;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.footer-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    color: #fff;
+}
+
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: #ddd;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+    margin-bottom: 0.5em;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+#comfort-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+#comfort-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#comfort-section .text-content {
+    max-width: 50%;
+}
+
+#comfort-section .image-content {
+    max-width: 50%;
+}
+
+#comfort-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#comfort-section p {
+    margin-bottom: 1rem;
+}
+
+#comfort-section .features-list {
+    list-style: none;
+    padding: 0;
+}
+
+#comfort-section .features-list li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.more-info {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #999999;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#comfort-section .more-info:hover {
+    background-color: #999999;
+}
+
+#style-function {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.feature {
+    width: 30%;
+    padding: 1rem;
+}
+
+.feature h3 {
+    margin-bottom: 1rem;
+}
+
+#faqs {
+    border-top: 1px solid #ccc;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+#faqs h2 {
+    margin-bottom: 1rem;
+}
+
+.sidebar {
+position: fixed;
+left: 0;
+top: 0;
+width: 250px;
+height: 100%;
+background: #f8f9fa;
+box-shadow: 2px 0 5px rgba(0,0,0,.3);
+transform: translateX(-100%);
+transition: transform 0.3s ease;
+}
+
+/* Style pour le menu déroulant affiché */
+.sidebar.show {
+transform: translateX(0);
+}
+
+/* Style pour la table et les boutons dans la sidebar */
+.summary-table {
+width: 100%;
+}
+
+.summary-table button {
+width: 100%;
+padding: 10px;
+border: none;
+background-color: #fff;
+text-align: left;
+transition: background-color 0.3s ease;
+}
+
+.summary-table button:hover {
+background-color: #eee;
+}
+#menuIcon {
+    margin-right: 20px; /* Ajustez selon vos besoins pour décaler le menu déroulant vers la droite */
+    display: flex;
+    align-items: center;
+}
+
+nav #logo {
+    flex-grow: 1; /* Cela permettra au logo de pousser les éléments de navigation vers la droite */
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end; /* Cela alignera les liens de navigation à droite */
+    gap: 1rem; /* Cela mettra un espace entre les liens de navigation */
+    margin: 0; /* Assurez-vous qu'il n'y a pas de marge externe qui décale les liens */
+}
+
+nav ul li a {
+    padding: .5rem 1rem;
+}
+
+#toggleSummaryButton {
+    max-width: 40px; /* Définissez la largeur maximale de l'image */
+    height: auto; /* Permet de conserver les proportions de l'image */
+}
+
+#sidebar {
+    z-index: 1; /* Assurez-vous que le menu déroulant est sous le contenu principal */
+}
+  
+
+.sidebar-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la même police */
+    font-size: 1.2rem; /* Taille de police agrandie */
+}
+
+.sidebar-button:hover {
+    background-color: #eee;
+}
+
+#pageWrapper {
+    transition: transform 0.3s ease;
+}
+
+.sidebar.show + #pageWrapper {
+    transform: translateX(250px); /* Ajustez la valeur selon la largeur de votre sidebar */
+}
+  
+/* Style pour le menu latéral */
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #e9ebf0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+/* Style pour le contenu principal décalé */
+.main-content {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+/* Ajouté quand le menu est ouvert pour décaler le contenu principal */
+.main-content.move-right {
+    margin-left: 250px;
+}
+
+#toggleMenuButton {
+    width: 40px;
+    height: 40px;
+}
